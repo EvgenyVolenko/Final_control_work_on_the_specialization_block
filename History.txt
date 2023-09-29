@@ -1,0 +1,95 @@
+2009  mkdir final_control_work
+ 2010  cd final_control_work/
+ 2011  ll
+ 2012  cat << EOF > Домашние животные
+Собаки
+Кошки
+Хомяки
+EOF
+
+ 2013  cat Домашние животные
+ 2014  cat > Домашние животные
+ 2015  cat > ДомашниеЖивотные
+ 2016  cat ДомашниеЖивотные
+ 2017  cat > ВьючныеЖивотные
+ 2018  cat ВьючныеЖивотные
+ 2019  rm ВьючныеЖивотные
+ 2020  rm ДомашниеЖивотные
+ 2021  дд
+ 2022  ll
+ 2023  rm Домашние
+ 2024  дд
+ 2025  ll
+ 2026  cat ДомашниеЖивотные
+ 2027  cat > ДомашниеЖивотные
+ 2028  cat ДомашниеЖивотные
+ 2029  cat > ВьючныЖивотные
+ 2030  cat ВьючныЖивотные
+ 2031  cat ДомашниеЖивотные ВьючныЖивотные > UnionAnimal
+ 2032  mv UnionAnimal ДрузьяЧеловека
+ 2033  cat ДрузьяЧеловека
+ 2034  mkdir newDir
+ 2035  mv ДрузьяЧеловека ./newDir
+ 2036  cd newDir/
+ 2037  ll
+ 2038  cd /
+ 2039  cd ~
+ 2040  sudo grep -rhE ^deb /etc/apt/sources.list*
+ 2041  wget https://dev.mysql.com/get/mysql-apt-config_0.8.26-1_all.deb
+ 2042  sudo grep -rhE ^deb /etc/apt/sources.list*
+ 2043  sudo dpkg -i mysql-apt-config_0.8.26-1_all.deb
+ 2044  sudo grep -rhE ^deb /etc/apt/sources.list*
+ 2045  sudo systemctl stop mysqld
+ 2046  sudo apt remove mysql-server mysql-common mysql-server-core-* mysql-client-core-*
+ 2047  sudo apt update
+ 2048  sudo apt upgrade
+ 2049  sudo apt autoremove
+ 2050  sudo apt install mysql-server
+ 2051  sudo apt-get download nginx
+ 2052  apt-get download nginx
+ 2053  sudo dpkg –i ./nginx_1.18.0-6ubuntu14.4_amd64.deb
+ 2054  sudo apt download nginx
+ 2055  ll
+ 2056  sudo dpkg –i nginx_1.18.0-6ubuntu14.4_amd64.deb
+ 2057  dpkg -s nginx
+ 2058  sudo dpkg --remove nginx
+ 2059  dpkg -s nginx
+ 2060  sudo dpkg --purge nginx
+ 2061  dpkg -s nginx
+ 2062  sudo dpkg –i nginx_1.18.0-6ubuntu14.4_amd64.deb
+ 2063  dpkg -s nginx
+ 2064  dpkg --help
+ 2065  dpkg –i nginx_1.18.0-6ubuntu14.4_amd64.deb
+ 2066  dpkg -s nginx
+ 2067  ll
+ 2068  sudo apt download nginx
+ 2069  ll
+ 2070  sudo rm nginx_1.18.0-6ubuntu14.4_amd64.deb
+ 2071  ll
+ 2072  sudo apt download nginx
+ 2073  sudo rm nginx_1.18.0-6ubuntu14.4_amd64.deb
+ 2074  apt download nginx
+ 2075  dpkg –i nginx_1.18.0-6ubuntu14.4_amd64.deb
+ 2076  sudo dpkg –i nginx_1.18.0-6ubuntu14.4_amd64.deb
+ 2077  ll
+ 2078  dpkg –i ./nginx_1.18.0-6ubuntu14.4_amd64.deb
+ 2079  sudo dpkg –i ./nginx_1.18.0-6ubuntu14.4_amd64.deb
+ 2080  sudo rm nginx_1.18.0-6ubuntu14.4_amd64.deb
+ 2081  ll
+ 2082  dpkg –i nginx_1.18.0-6ubuntu14.4_amd64.deb
+ 2083  dpkg -s nginx
+ 2084  apt download nginx
+ 2085  ll
+ 2086  dpkg -i nginx_1.18.0-6ubuntu14.4_amd64.deb
+ 2087  sudo dpkg -i nginx_1.18.0-6ubuntu14.4_amd64.deb
+ 2088  dpkg -s nginx
+ 2089  sudo dpkg --purge nginx
+ 2090  dpkg -s nginx
+ 2091  ll
+ 2092  rm nginx_1.18.0-6ubuntu14.4_amd64.deb
+ 2093  ll
+ 2094  apt download nginx
+ 2095  sudo dpkg -i nginx_1.18.0-6ubuntu14.4_amd64.deb
+ 2096  sudo dpkg --purge nginx
+ 2097  history
+student@student-GB:~$
