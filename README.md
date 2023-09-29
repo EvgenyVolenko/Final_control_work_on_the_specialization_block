@@ -7,8 +7,11 @@
 1. Используя команду cat в терминале операционной системы Linux, создать два файла: Домашние животные (заполнив файл собаками,кошками, хомяками) и Вьючные животные (заполнив файл Лошадьми,верблюдами, ослами), а затем объединить их. Просмотреть содержимое созданного файла. Переименовать файл, дав ему новое имя (Друзья человека). 
 ![Задание 1](https://github.com/EvgenyVolenko/Final_control_work_on_the_specialization_block/blob/main/Pictures/task_1.jpg)
 2. Создать директорию, переместить файл туда. 
-![Задание 1](https://github.com/EvgenyVolenko/Final_control_work_on_the_specialization_block/blob/main/Pictures/task_2.jpg)
-3. Подключить дополнительный репозиторий MySQL.Установить любой пакет из этого репозитория. 
+![Задание 2](https://github.com/EvgenyVolenko/Final_control_work_on_the_specialization_block/blob/main/Pictures/task_2.jpg)
+3. Подключить дополнительный репозиторий MySQL. Установить любой пакет из этого репозитория. 
+![Задание 3_1](https://github.com/EvgenyVolenko/Final_control_work_on_the_specialization_block/blob/main/Pictures/task_3_1.jpg)
+![Задание 3_2](https://github.com/EvgenyVolenko/Final_control_work_on_the_specialization_block/blob/main/Pictures/task_3_2.jpg)
+![Задание 3_3](https://github.com/EvgenyVolenko/Final_control_work_on_the_specialization_block/blob/main/Pictures/task_3_3.jpg)
 4. Установить и удалить deb-пакет с помощью dpkg. 
 5. Выложить историю команд в терминале ubuntu.
 6. Нарисовать диаграмму, в которой есть родительский класс, домашние животные и вьючные животные,в составе которых в случае домашних животных войдут классы: собаки, кошки, хомяки, а в класс вьючных животных войдут: лошади,верблюды и ослы.
