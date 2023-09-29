@@ -14,7 +14,7 @@
 ![Задание 3_3](https://github.com/EvgenyVolenko/Final_control_work_on_the_specialization_block/blob/main/Pictures/task_3_3.jpg)
 4. Установить и удалить deb-пакет с помощью dpkg. 
 ![Задание 4](https://github.com/EvgenyVolenko/Final_control_work_on_the_specialization_block/blob/main/Pictures/task_4.jpg)
-5. Выложить историю команд в терминале ubuntu.
+5. Выложить историю команд в терминале ubuntu.\
 Они [ТУТ](https://github.com/EvgenyVolenko/Final_control_work_on_the_specialization_block/blob/main/History.txt)
 6. Нарисовать диаграмму, в которой есть родительский класс, домашние животные и вьючные животные,в составе которых в случае домашних животных войдут классы: собаки, кошки, хомяки, а в класс вьючных животных войдут: лошади,верблюды и ослы.
 7. В подключенном MySQL репозитории создать базу данных “Друзья человека”.
