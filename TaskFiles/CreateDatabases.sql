@@ -12,14 +12,16 @@ CREATE TABLE pets
 (
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	pet_class VARCHAR(30) NOT NULL,
-    FOREIGN KEY (id) REFERENCES animals(id)
+    animals_id INT NOT NULL,
+    FOREIGN KEY (animals_id) REFERENCES animals(id)
 );
 
 CREATE TABLE pack_animals
 (
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	pack_animal_class VARCHAR(30) NOT NULL,
-    FOREIGN KEY (id) REFERENCES animals(id)
+    animals_id INT NOT NULL,
+    FOREIGN KEY (animals_id) REFERENCES animals(id)
 );
 
 CREATE TABLE dogs 
@@ -28,7 +30,8 @@ CREATE TABLE dogs
   nickname VARCHAR(30) NOT NULL,
   commands VARCHAR(50),
   date_of_birth DATE NOT NULL,
-  FOREIGN KEY (id) REFERENCES pets(id)
+  pets_id INT NOT NULL,
+  FOREIGN KEY (pets_id) REFERENCES pets(id)
 );
 
 CREATE TABLE cats 
@@ -37,7 +40,8 @@ CREATE TABLE cats
   nickname VARCHAR(30) NOT NULL,
   commands VARCHAR(50),
   date_of_birth DATE NOT NULL,
-  FOREIGN KEY (id) REFERENCES pets(id)
+  pets_id INT NOT NULL,
+  FOREIGN KEY (pets_id) REFERENCES pets(id)
 );
 
 CREATE TABLE hamsters
@@ -46,7 +50,8 @@ CREATE TABLE hamsters
   nickname VARCHAR(30) NOT NULL,
   commands VARCHAR(50),
   date_of_birth DATE NOT NULL,
-  FOREIGN KEY (id) REFERENCES pets(id)
+  pets_id INT NOT NULL,
+  FOREIGN KEY (pets_id) REFERENCES pets(id)
 );
 
 CREATE TABLE horses
@@ -55,7 +60,8 @@ CREATE TABLE horses
   nickname VARCHAR(30) NOT NULL,
   commands VARCHAR(50),
   date_of_birth DATE NOT NULL,
-  FOREIGN KEY (id) REFERENCES pack_animals(id)
+  pack_animals_id INT NOT NULL,
+  FOREIGN KEY (pack_animals_id) REFERENCES pack_animals(id)
 );
 
 CREATE TABLE camels
@@ -64,7 +70,8 @@ CREATE TABLE camels
   nickname VARCHAR(30) NOT NULL,
   commands VARCHAR(50),
   date_of_birth DATE NOT NULL,
-  FOREIGN KEY (id) REFERENCES pack_animals(id)
+  pack_animals_id INT NOT NULL,
+  FOREIGN KEY (pack_animals_id) REFERENCES pack_animals(id)
 );
 
 CREATE TABLE donkeys
@@ -73,5 +80,7 @@ CREATE TABLE donkeys
   nickname VARCHAR(30) NOT NULL,
   commands VARCHAR(50),
   date_of_birth DATE NOT NULL,
-  FOREIGN KEY (id) REFERENCES pack_animals(id)
+  pack_animals_id INT NOT NULL,
+  FOREIGN KEY (pack_animals_id) REFERENCES pack_animals(id)
 );
+

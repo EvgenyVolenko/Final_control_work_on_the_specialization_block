@@ -15,16 +15,18 @@
 4. Установить и удалить deb-пакет с помощью dpkg. 
 ![Задание 4](https://github.com/EvgenyVolenko/Final_control_work_on_the_specialization_block/blob/main/Pictures/task_4.jpg)
 5. Выложить историю команд в терминале ubuntu.\
-Они [ТУТ](https://github.com/EvgenyVolenko/Final_control_work_on_the_specialization_block/blob/main/TaskFiles/History.txt)
+***Они [ТУТ](https://github.com/EvgenyVolenko/Final_control_work_on_the_specialization_block/blob/main/TaskFiles/History.txt)***
 6. Нарисовать диаграмму, в которой есть родительский класс, домашние животные и вьючные животные,в составе которых в случае домашних животных войдут классы: собаки, кошки, хомяки, а в класс вьючных животных войдут: лошади,верблюды и ослы.
 ![Диаграмма](https://github.com/EvgenyVolenko/Final_control_work_on_the_specialization_block/blob/main/Pictures/Diagram.jpg)
 7. В подключенном MySQL репозитории создать базу данных “Друзья человека”.
 8. Создать таблицы с иерархией из диаграммы в БД.\
-Решение пунктов 7 и 8 [ТУТ](https://github.com/EvgenyVolenko/Final_control_work_on_the_specialization_block/blob/main/TaskFiles/CreateDatabases.sql)
-9. Заполнить низкоуровневые таблицы именами(животных), командами которые они выполняют и датами рождения.
+***Решение пунктов 7 и 8 [ТУТ](https://github.com/EvgenyVolenko/Final_control_work_on_the_specialization_block/blob/main/TaskFiles/CreateDatabases.sql)***
+9. Заполнить низкоуровневые таблицы именами(животных), командами которые они выполняют и датами рождения.\
+***ОНО [ТУТ](https://github.com/EvgenyVolenko/Final_control_work_on_the_specialization_block/blob/main/TaskFiles/FillingTables.sql)***
 10. Удалить из таблицы верблюдов, т.к. верблюдов решили перевезти в другой питомник на зимовку. Объединить таблицы лошади и ослы в одну таблицу.
 11. Создать новую таблицу “молодые животные” в которую попадут все животные старше 1 года, но младше 3 лет и в отдельном столбце с точностью до месяца подсчитать возраст животных в новойтаблице.
-12. Объединить все таблицы в одну, при этом сохраняя поля, указывающие на прошлую принадлежность к старым таблицам. 
+12. Объединить все таблицы в одну, при этом сохраняя поля, указывающие на прошлую принадлежность к старым таблицам.\
+***Решение пунктов 7 и 8 [ТУТ](https://github.com/EvgenyVolenko/Final_control_work_on_the_specialization_block/blob/main/TaskFiles/Tasks.sql)***
 13. Создать классс Инкапсуляцией методов и наследованием по диаграмме.
 14. Написать программу, имитирующую работу реестра домашних животных.В программе должен быть реализован следующий функционал:\
     14.1. Завести новое животное\
