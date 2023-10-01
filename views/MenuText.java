@@ -1,6 +1,6 @@
 package views;
 
-public class Menu {
+public class MenuText {
 
     public static void printMenu() {
 
