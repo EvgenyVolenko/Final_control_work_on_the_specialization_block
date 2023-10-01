@@ -1,5 +1,6 @@
 import model.*;
 import views.Menu;
+import views.Printer;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,5 +11,7 @@ public class Main {
         // System.out.println(dog.toString() + "\n" + camel.toString());
 
         Menu.printMenu();
+
+        Printer.PrintAnimal(dog);
     }
 }
