@@ -10,13 +10,15 @@ public class MenuListOfAnimals {
 
     public void run(ListOfAnimals listOfAnimals) {
 
+        Scanner in = new Scanner(System.in, "Cp866");
+
         String com = null;
 
         while (true) {
             try {
                 System.out.println();
                 MenuText.printMenu();
-                com = prompt("Введите команду: ").toUpperCase();
+                com = prompt("Введите команду: ", in).toUpperCase();
                 System.out.println();
 
                 if (com.equals("EXIT")) {
@@ -28,13 +30,13 @@ public class MenuListOfAnimals {
                         list(listOfAnimals);
                         break;
                     case "2":
-                        add(listOfAnimals);
+                        add(listOfAnimals, in);
                         break;
                     case "3":
-                        commandsList(listOfAnimals);
+                        commandsList(listOfAnimals, in);
                         break;
                     case "4":
-                        // addCommands(listOfAnimals);
+                        addCommands(listOfAnimals, in);
                         break;
                 }
             } catch (Exception e) {
@@ -49,11 +51,11 @@ public class MenuListOfAnimals {
         }
     }
 
-    private void add(ListOfAnimals listOfAnimals) throws Exception {
+    private void add(ListOfAnimals listOfAnimals, Scanner in) throws Exception {
 
         Animal newAnimal = null;
 
-        String typeAnimal = prompt("Введите тип животного (Собака, Кошка, Хомяк, Лошадь, Верблюд или Осел): ")
+        String typeAnimal = prompt("Введите тип животного (Собака, Кошка, Хомяк, Лошадь, Верблюд или Осел): ", in)
                 .toUpperCase();
 
         switch (typeAnimal) {
@@ -79,42 +81,42 @@ public class MenuListOfAnimals {
                 throw new IllegalStateException("Вы ввели недопустимый тип животого: " + typeAnimal);
         }
 
-        String name = prompt("Введите имя животного: ");
+        String name = prompt("Введите имя животного: ", in);
         newAnimal.setName(name);
-        String com = prompt("Введите комманду для обучения: ");
-        ArrayList<String> temp = null;
+        String com = prompt("Введите комманду для обучения: ", in);
+        ArrayList<String> temp = new ArrayList<>();
         temp.add(com);
         newAnimal.setCommands(temp);
-        String date_of_birth = prompt("Введите дату рождения животного в формате ДД-ММ-ГГГГ: ");
+        String date_of_birth = prompt("Введите дату рождения животного в формате ДД-ММ-ГГГГ: ", in);
         newAnimal.setDate_of_birth(date_of_birth);
         listOfAnimals.addAnimal(newAnimal);
     }
 
-    private void commandsList(ListOfAnimals listOfAnimals) {
-        String name = prompt("Введите кличку животного, чьи команды желаете узнать: ");
+    private void commandsList(ListOfAnimals listOfAnimals, Scanner in) {
+        String name = prompt("Введите кличку животного, чьи команды желаете узнать: ", in);
         Animal animal = findAnimal(listOfAnimals, name);
 
         if (animal == null) {
             System.out.println("Такого животного нет в списке!");
         } else {
-            System.out.printf("\nЖивотное %s, кличка %s, выполняет команды '%s'.\n", 
+            System.out.printf("\nЖивотное %s, кличка %s, выполняет команды %s.\n", 
                 TypeHandler.GetAnimalType(animal), animal.getName(), animal.getCommands());
         }
     }
 
-    // private void addCommands(ListOfAnimals listOfAnimals){
-    //     String name = prompt("Введите кличку животного, которое хотите обучить: ");
-    //     Animal animal = findAnimal(listOfAnimals, name);
+    private void addCommands(ListOfAnimals listOfAnimals, Scanner in){
+        String name = prompt("Введите кличку животного, которое хотите обучить: ", in);
+        Animal animal = findAnimal(listOfAnimals, name);
         
-    //     if (animal == null) {
-    //         System.out.println("Такого животного нет в списке!");
-    //     } else {
-    //         String commands = animal.getCommands();
-    //         String newCommand = prompt("Введите новую команду: ");
-    //         commands = commands + ", " + newCommand;
-    //         animal.setCommands(commands);
-    //     }
-    // }
+        if (animal == null) {
+            System.out.println("Такого животного нет в списке!");
+        } else {
+            ArrayList<String> commands = animal.getCommands();
+            String newCommand = prompt("Введите новую команду: ", in);
+            commands.add(newCommand);
+            animal.setCommands(commands);
+        }
+    }
 
     private Animal findAnimal(ListOfAnimals listOfAnimals, String name) {
         for (Animal animal : listOfAnimals) {
@@ -125,9 +127,8 @@ public class MenuListOfAnimals {
         return null;
     }
 
-    private String prompt(String message) {
+    private String prompt(String message, Scanner in) {
 
-        Scanner in = new Scanner(System.in, "Cp866");
         System.out.print(message);
         return in.nextLine();
     }
