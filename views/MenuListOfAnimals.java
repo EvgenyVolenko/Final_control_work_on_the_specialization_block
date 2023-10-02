@@ -123,10 +123,9 @@ public class MenuListOfAnimals {
     }
 
     private String prompt(String message) {
+        
         Scanner in = new Scanner(System.in, "Cp866");
         System.out.print(message);
-        String str = in.nextLine();
-        // in.close();
-        return str;
+        return in.nextLine();
     }
 }
