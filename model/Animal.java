@@ -1,12 +1,14 @@
 package model;
 
+import java.util.ArrayList;
+
 public abstract class Animal {
 
     private String name;
-    private String commands;
+    private ArrayList<String> commands;
     private String date_of_birth;
 
-    public Animal(String name, String commands, String date_of_birth) {
+    public Animal(String name, ArrayList<String> commands, String date_of_birth) {
         this.name = name;
         this.commands = commands;
         this.date_of_birth = date_of_birth;
@@ -20,11 +22,11 @@ public abstract class Animal {
         this.name = name;
     }
 
-    public String getCommands() {
+    public ArrayList<String> getCommands() {
         return commands;
     }
 
-    public void setCommands(String commands) {
+    public void setCommands(ArrayList<String> commands) {
         this.commands = commands;
     }
 

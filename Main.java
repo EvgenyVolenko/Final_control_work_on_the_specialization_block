@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import model.*;
 import views.*;
 
@@ -6,8 +9,8 @@ public class Main {
 
         ListOfAnimals listOfAnimals = new ListOfAnimals();
 
-        listOfAnimals.addAnimal(new Dog("Вася", "Стой, беги", "25-06-2023"))
-                     .addAnimal(new Kamel("Коля", "Стой, беги, Лежать", "02-10-2023"));
+        listOfAnimals.addAnimal(new Dog("Тузик", new ArrayList<>(Arrays.asList("Стоять", "Бежать")), "03-12-2018"));
+                     
       
         MenuListOfAnimals list = new MenuListOfAnimals();
         list.run(listOfAnimals);
