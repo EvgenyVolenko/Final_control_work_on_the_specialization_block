@@ -35,7 +35,7 @@ public class MenuListOfAnimals {
                             if (add(listOfAnimals, in))
                                 counter.add();
                             System.out.println("Счетчик = " + counter.getCount());
-                        } catch (Exception e) {
+                        } catch (NullPointerException e) {
                             System.out.println("Введен недопустимы тип животного.");
                         }
                         break;
@@ -82,10 +82,9 @@ public class MenuListOfAnimals {
             case "ОСЕЛ":
                 newAnimal = new Donkey(null, null, null);
                 break;
-            // default:
-            //     throw new IllegalStateException("Вы ввели недопустимый тип животого: " + typeAnimal);
         }
 
+        newAnimal.getClass();
         String name = prompt("Введите имя животного: ", in);
         newAnimal.setName(name);
         String com = prompt("Введите комманду для обучения: ", in);
