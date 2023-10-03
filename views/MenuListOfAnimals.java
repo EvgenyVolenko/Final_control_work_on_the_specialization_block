@@ -33,7 +33,7 @@ public class MenuListOfAnimals {
                         list(listOfAnimals);
                         break;
                     case "2":
-                        add(listOfAnimals, in);
+                        if (add(listOfAnimals, in)) counter.add();
                         break;
                     case "3":
                         commandsList(listOfAnimals, in);
@@ -54,7 +54,7 @@ public class MenuListOfAnimals {
         }
     }
 
-    private void add(ListOfAnimals listOfAnimals, Scanner in) throws Exception {
+    private boolean add(ListOfAnimals listOfAnimals, Scanner in) throws Exception {
 
         Animal newAnimal = null;
 
@@ -93,6 +93,12 @@ public class MenuListOfAnimals {
         String date_of_birth = prompt("Введите дату рождения животного в формате ДД-ММ-ГГГГ: ", in);
         newAnimal.setDate_of_birth(date_of_birth);
         listOfAnimals.addAnimal(newAnimal);
+
+        if (name.isEmpty() || com.isEmpty() || date_of_birth.isEmpty()) {
+            return false;
+        }
+
+        return true;
     }
 
     private void commandsList(ListOfAnimals listOfAnimals, Scanner in) {
