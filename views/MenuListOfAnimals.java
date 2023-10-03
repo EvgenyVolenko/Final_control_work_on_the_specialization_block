@@ -3,12 +3,15 @@ package views;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import controllers.Counter;
 import controllers.TypeHandler;
 import model.*;
 
 public class MenuListOfAnimals {
 
     public void run(ListOfAnimals listOfAnimals) {
+
+        Counter counter = new Counter(0);
 
         Scanner in = new Scanner(System.in, "Cp866");
 
