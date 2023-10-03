@@ -11,14 +11,12 @@ public class MenuListOfAnimals {
 
     public void run(ListOfAnimals listOfAnimals) {
 
-        Counter counter = new Counter(0);
+        try (Scanner in = new Scanner(System.in, "Cp866"); Counter counter = new Counter(0)) {
 
-        Scanner in = new Scanner(System.in, "Cp866");
+            String com = null;
 
-        String com = null;
+            while (true) {
 
-        while (true) {
-            try {
                 System.out.println();
                 MenuText.printMenu();
                 com = prompt("Введите команду: ", in).toUpperCase();
@@ -33,7 +31,13 @@ public class MenuListOfAnimals {
                         list(listOfAnimals);
                         break;
                     case "2":
-                        if (add(listOfAnimals, in)) counter.add();
+                        try {
+                            if (add(listOfAnimals, in))
+                                counter.add();
+                            System.out.println("Счетчик = " + counter.getCount());
+                        } catch (Exception e) {
+                            System.out.println("Введен недопустимы тип животного.");
+                        }
                         break;
                     case "3":
                         commandsList(listOfAnimals, in);
@@ -42,8 +46,6 @@ public class MenuListOfAnimals {
                         addCommands(listOfAnimals, in);
                         break;
                 }
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
             }
         }
     }
@@ -54,7 +56,7 @@ public class MenuListOfAnimals {
         }
     }
 
-    private boolean add(ListOfAnimals listOfAnimals, Scanner in) throws Exception {
+    private boolean add(ListOfAnimals listOfAnimals, Scanner in) {
 
         Animal newAnimal = null;
 
@@ -80,8 +82,8 @@ public class MenuListOfAnimals {
             case "ОСЕЛ":
                 newAnimal = new Donkey(null, null, null);
                 break;
-            default:
-                throw new IllegalStateException("Вы ввели недопустимый тип животого: " + typeAnimal);
+            // default:
+            //     throw new IllegalStateException("Вы ввели недопустимый тип животого: " + typeAnimal);
         }
 
         String name = prompt("Введите имя животного: ", in);
@@ -108,15 +110,15 @@ public class MenuListOfAnimals {
         if (animal == null) {
             System.out.println("Такого животного нет в списке!");
         } else {
-            System.out.printf("\nЖивотное %s, кличка %s, выполняет команды %s.\n", 
-                TypeHandler.GetAnimalType(animal), animal.getName(), animal.getCommands());
+            System.out.printf("\nЖивотное %s, кличка %s, выполняет команды %s.\n",
+                    TypeHandler.GetAnimalType(animal), animal.getName(), animal.getCommands());
         }
     }
 
-    private void addCommands(ListOfAnimals listOfAnimals, Scanner in){
+    private void addCommands(ListOfAnimals listOfAnimals, Scanner in) {
         String name = prompt("Введите кличку животного, которое хотите обучить: ", in);
         Animal animal = findAnimal(listOfAnimals, name);
-        
+
         if (animal == null) {
             System.out.println("Такого животного нет в списке!");
         } else {
